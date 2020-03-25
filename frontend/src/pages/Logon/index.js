@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";
 
 import logoImg from "../../assets/logo.svg";
@@ -20,9 +21,9 @@ export default function Logon() {
             Enter
           </button>
 
-          <a href="/register">
+          <Link className="back-link" to="/register">
             <FiLogIn size={16} color="#E02041" />I don't have an account.
-          </a>
+          </Link>
         </form>
       </section>
 
