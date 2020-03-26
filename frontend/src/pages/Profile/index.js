@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FiPower } from "react-icons/fi";
+import { FiPower, FiTrash2 } from "react-icons/fi";
 
 import "./styles.css";
 
@@ -20,6 +20,67 @@ export default function Profile() {
           <FiPower size={18} color="#E02041" />
         </button>
       </header>
+
+      <h1>Registered Incidents</h1>
+
+      <ul>
+        <li>
+          <strong>ICIDENT:</strong>
+          <p>Test incident.</p>
+
+          <strong>DESCRIPTION:</strong>
+          <p>Test description.</p>
+
+          <strong>VALUE:</strong>
+          <p>120$</p>
+
+          <button type="button">
+            <FiTrash2 size={20} color="#a8a8b3" />
+          </button>
+        </li>
+        <li>
+          <strong>ICIDENT:</strong>
+          <p>Test incident.</p>
+
+          <strong>DESCRIPTION:</strong>
+          <p>Test description.</p>
+
+          <strong>VALUE:</strong>
+          <p>120$</p>
+
+          <button type="button">
+            <FiTrash2 size={20} color="#a8a8b3" />
+          </button>
+        </li>
+        <li>
+          <strong>ICIDENT:</strong>
+          <p>Test incident.</p>
+
+          <strong>DESCRIPTION:</strong>
+          <p>Test description.</p>
+
+          <strong>VALUE:</strong>
+          <p>120$</p>
+
+          <button type="button">
+            <FiTrash2 size={20} color="#a8a8b3" />
+          </button>
+        </li>
+        <li>
+          <strong>ICIDENT:</strong>
+          <p>Test incident.</p>
+
+          <strong>DESCRIPTION:</strong>
+          <p>Test description.</p>
+
+          <strong>VALUE:</strong>
+          <p>120$</p>
+
+          <button type="button">
+            <FiTrash2 size={20} color="#a8a8b3" />
+          </button>
+        </li>
+      </ul>
     </div>
   );
 }
