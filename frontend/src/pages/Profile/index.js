@@ -9,7 +9,7 @@ import "./styles.css";
 import logoImg from "../../assets/logo.svg";
 
 export default function Profile() {
-  //Ficamos aqui 01:34:12
+  //Ficamos aqui 01:39:29
   const [incidents, setIncidents] = useState([]);
 
   const ongId = localStorage.getItem("ongId");
@@ -26,6 +26,20 @@ export default function Profile() {
         setIncidents(response.data);
       });
   }, [ongId]);
+
+  async function handleDeleteIncident(id) {
+    try {
+      await api.delete(`incidents/${id}`, {
+        headers: {
+          Authorization: ongId
+        }
+      });
+
+      setIncidents(incidents.filter(incident => incident.id !== id));
+    } catch (err) {
+      alert("Error on deleting the case, try again.");
+    }
+  }
 
   return (
     <div className="profile-container">
@@ -53,9 +67,17 @@ export default function Profile() {
             <p>{incident.description}</p>
 
             <strong>VALUE:</strong>
-            <p>{incident.value}</p>
+            <p>
+              {Intl.NumberFormat("pt-PT", {
+                style: "currency",
+                currency: "EUR"
+              }).format(incident.value)}
+            </p>
 
-            <button type="button">
+            <button
+              onClick={() => handleDeleteIncident(incident.id)}
+              type="button"
+            >
               <FiTrash2 size={20} color="#a8a8b3" />
             </button>
           </li>
