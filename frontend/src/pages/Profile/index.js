@@ -9,7 +9,7 @@ import "./styles.css";
 import logoImg from "../../assets/logo.svg";
 
 export default function Profile() {
-  //Ficamos aqui 01:39:29
+  //Ficamos aqui 01:41:00
   const [incidents, setIncidents] = useState([]);
 
   const ongId = localStorage.getItem("ongId");
