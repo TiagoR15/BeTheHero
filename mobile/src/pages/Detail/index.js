@@ -9,7 +9,7 @@ import logoImg from "../../assets/logo.png";
 import styles from "./styles";
 
 export default function Detail() {
-  //01:07:10
+  //01:16:01
   const navigation = useNavigation();
   const message = "Hello!";
 
